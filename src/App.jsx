@@ -1,9 +1,10 @@
 import "./App.css";
+import TicTacToe from "./Componets/TicTacToe";
 
 function App() {
   return (
     <>
-      <h1>Hello I am Sagathiya Jaydeep</h1>
+      <TicTacToe />
     </>
   );
 }
