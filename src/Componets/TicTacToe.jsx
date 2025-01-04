@@ -18,30 +18,50 @@ function TicTacToe() {
 
   const dataSetHandler = (index) => {
     let buttonCopy = [...buttonList];
-    if (buttonCopy[index] === "") {
-      let turnCopy = CurruntPlayer;
-      turnCopy = turnCopy === "X" ? "O" : "X";
-      setCurruntPlayer(turnCopy);
+    if (buttonCopy[index] === "" && !winner) {
       buttonCopy[index] = CurruntPlayer;
+      console.log(buttonCopy);
       setButtonList(buttonCopy);
-      checkWinner(CurruntPlayer);
+      setCurruntPlayer(CurruntPlayer === "X" ? "O" : "X");
+      if (checkWinner(CurruntPlayer, buttonCopy)) {
+        setWinner(true);
+        setMsg(`${CurruntPlayer} Is Winner !!`);
+      } else {
+        if (checkDraw(buttonCopy)) {
+          setMsg("Match Draw !");
+        }
+      }
     }
   };
 
   const restartGame = () => {
     setMsg("Start New Game !!");
-    if (buttonList !== "") {
-      setButtonList(Array(9).fill(""));
+    setButtonList(Array(9).fill(""));
+    setCurruntPlayer("X");
+    setWinner(false);
+  };
+
+  const checkWinner = (CurruntPlayer, buttonList) => {
+    for (let i = 0; i < winChance.length; i++) {
+      let [a, b, c] = winChance[i];
+      if (
+        buttonList[a] === CurruntPlayer &&
+        buttonList[b] === CurruntPlayer &&
+        buttonList[c] === CurruntPlayer
+      ) {
+        return true;
+      }
     }
+    return false;
   };
 
-  const checkWinner = (CurruntPlayer) => {
-    console.log(CurruntPlayer);
+  const checkDraw = (buttonList) => {
+    return buttonList.every((button) => button !== "");
   };
-
   return (
     <>
       <div className="mainBox">
+        <h1>TIC TAC TOE</h1>
         <div className="box">
           {buttonList.map((el, i) => (
             <button key={i} className="btn" onClick={() => dataSetHandler(i)}>
