@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SagathiyaJaydeep/React-Tic-Tac-Toe/static/css/main.ba1f30a5.css",
+    "main.js": "/SagathiyaJaydeep/React-Tic-Tac-Toe/static/js/main.a31b2163.js",
+    "static/js/488.3a95b820.chunk.js": "/SagathiyaJaydeep/React-Tic-Tac-Toe/static/js/488.3a95b820.chunk.js",
+    "index.html": "/SagathiyaJaydeep/React-Tic-Tac-Toe/index.html",
+    "main.ba1f30a5.css.map": "/SagathiyaJaydeep/React-Tic-Tac-Toe/static/css/main.ba1f30a5.css.map",
+    "main.a31b2163.js.map": "/SagathiyaJaydeep/React-Tic-Tac-Toe/static/js/main.a31b2163.js.map",
+    "488.3a95b820.chunk.js.map": "/SagathiyaJaydeep/React-Tic-Tac-Toe/static/js/488.3a95b820.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba1f30a5.css",
+    "static/js/main.a31b2163.js"
+  ]
+}
