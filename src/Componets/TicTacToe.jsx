@@ -18,7 +18,7 @@ function TicTacToe() {
 
   const dataSetHandler = (index) => {
     let buttonCopy = [...buttonList];
-    if (buttonCopy[index] === "" && !winner) {
+    if (buttonCopy[index] === "" && !winner) {  
       buttonCopy[index] = CurruntPlayer;
       console.log(buttonCopy);
       setButtonList(buttonCopy);
